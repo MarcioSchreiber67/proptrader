@@ -7,138 +7,117 @@
   <title>PropTrader Master | Mentoria</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #0d0d0d; color: #f5f5f5; }
-    header { background-color: #1a1a1a; padding: 30px 20px; text-align: center; }
-    header img { max-width: 260px; height: auto; margin-bottom: 15px; border-radius: 12px; }
-    header h1 { font-size: 2rem; margin: 10px 0 5px; }
-    header p { font-size: 1.1rem; color: #ccc; }
-    section { padding: 30px 20px; max-width: 900px; margin: auto; }
-    h2 { color: #00ffcc; margin-bottom: 20px; font-size: 1.6rem; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #0d0d0d;
+      color: #f5f5f5;
+    }
+    header {
+      background-color: #1a1a1a;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    header img {
+      max-width: 240px;
+      height: auto;
+      margin-bottom: 15px;
+    }
+    header h1 {
+      font-size: 2rem;
+      margin: 10px 0 5px;
+    }
+    header p {
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+    .welcome {
+      background-color: #00ffcc;
+      color: #000;
+      padding: 14px;
+      text-align: center;
+      font-weight: bold;
+    }
+    section {
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #00ffcc;
+      margin-bottom: 20px;
+      font-size: 1.6rem;
+    }
     .accordion, .subaccordion {
-      background-color: #1f1f1f; color: #f5f5f5; cursor: pointer;
-      padding: 15px; width: 100%; border: none; text-align: left;
-      outline: none; font-size: 1rem; transition: 0.4s; margin-top: 10px;
+      background-color: #1f1f1f;
+      color: #f5f5f5;
+      cursor: pointer;
+      padding: 15px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 1rem;
+      transition: 0.4s;
+      margin-top: 10px;
       border-radius: 6px;
     }
-    .active, .accordion:hover, .subaccordion:hover { background-color: #333; }
+    .active, .accordion:hover, .subaccordion:hover {
+      background-color: #333;
+    }
     .panel, .subpanel {
-      padding: 0 15px; display: none; background-color: #111;
-      overflow: hidden; border-left: 3px solid #00ffcc; margin-bottom: 10px;
+      padding: 0 15px;
+      display: none;
+      background-color: #111;
+      overflow: hidden;
+      border-left: 3px solid #00ffcc;
+      margin-bottom: 10px;
     }
     .cta {
-      background-color: #00ffcc; color: #000; text-align: center;
-      padding: 20px; font-weight: bold; font-size: 1.2rem; border-radius: 8px;
-      text-decoration: none; display: block; margin: 40px auto; max-width: 300px;
+      background-color: #00ffcc;
+      color: #000;
+      text-align: center;
+      padding: 20px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      display: block;
+      margin: 40px auto;
+      max-width: 300px;
+    }
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      padding: 14px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      z-index: 1000;
     }
   </style>
 </head>
 <body>
 
+  <div class="welcome">Bem-vindo à mentoria PropTrader Master – Do Zero à Consistência no Day Trade.</div>
+
   <header>
     <img src="logo.jpeg" alt="Logo PropTrader Master" />
     <h1>PropTrader Master</h1>
-    <p>Mentoria do Zero à Consistência no Day Trade</p>
+    <p>Mentoria completa e intensiva para quem quer consistência no Day Trade</p>
   </header>
 
   <section>
     <h2>Conteúdo da Mentoria</h2>
-
-    <button class="accordion">Fase 1 – Curso Completo de Day Trade</button>
-    <div class="panel">
-      <p><strong>Módulo 1:</strong> Fundamentos do Day Trade e Plataforma</p>
-      <button class="subaccordion">Ver conteúdo completo</button>
-      <div class="subpanel">
-        <ul>
-          <li>Diferença entre Day Trade, Swing Trade e Position</li>
-          <li>Tipos de mercado: Ações, Índices, Forex, Criptomoedas</li>
-          <li>Configuração do MetaTrader e NinjaTrader</li>
-          <li>Como funcionam as mesas proprietárias</li>
-        </ul>
-      </div>
-
-      <p><strong>Módulo 2:</strong> Análise Técnica Básica</p>
-      <button class="subaccordion">Ver conteúdo completo</button>
-      <div class="subpanel">
-        <ul>
-          <li>O que é Análise Técnica</li>
-          <li>Leitura de Candlestick</li>
-          <li>Suporte, Resistência, Tempos Gráficos</li>
-          <li>Tipos de ordens: mercado, pendentes, stop loss, take profit</li>
-          <li>Indicadores: Médias Móveis 8 e 20, Volume</li>
-        </ul>
-      </div>
-
-      <p><strong>Módulo 3:</strong> Price Action e Técnicas Avançadas</p>
-      <button class="subaccordion">Ver conteúdo completo</button>
-      <div class="subpanel">
-        <ul>
-          <li>Eventos de Entrada: BE, Bull/Bear 180, RBI/GBI, CC, NRB</li>
-          <li>Localizações estratégicas e rompimentos</li>
-          <li>Pullback Clássico, Contra a Tendência, Fabulous Four</li>
-          <li>Gestão de Stop Loss: técnico, financeiro, trailing stop</li>
-        </ul>
-      </div>
-
-      <p><strong>Módulo 4:</strong> Gerenciamento e Diário de Trading</p>
-      <button class="subaccordion">Ver conteúdo completo</button>
-      <div class="subpanel">
-        <ul>
-          <li>Cálculo de risco por operação</li>
-          <li>Gestão diária e mensal</li>
-          <li>Diário de operações e desempenho</li>
-          <li>Diário emocional e controle de gatilhos</li>
-        </ul>
-      </div>
-
-      <p><strong>Módulo 5:</strong> Psicologia no Trading</p>
-      <button class="subaccordion">Ver conteúdo completo</button>
-      <div class="subpanel">
-        <ul>
-          <li>Mindset do trader consistente</li>
-          <li>Autoconhecimento e autocontrole</li>
-          <li>Rotina de trader de alta performance</li>
-        </ul>
-      </div>
-    </div>
-
-    <button class="accordion">Fase 2 – Prática e Mentoria Intensiva</button>
-    <div class="panel">
-      <p><strong>Módulo 1:</strong> Operando na Prática</p>
-      <button class="subaccordion">Ver conteúdo completo</button>
-      <div class="subpanel">
-        <ul>
-          <li>Configuração prática de plataformas</li>
-          <li>Ordens a mercado e pendentes</li>
-          <li>Testes com simulador e replay de mercado</li>
-          <li>Rotina de preparação e encerramento</li>
-        </ul>
-      </div>
-
-      <p><strong>Módulo 2:</strong> Correção das Operações</p>
-      <button class="subaccordion">Ver conteúdo completo</button>
-      <div class="subpanel">
-        <ul>
-          <li>Análise e feedback das operações</li>
-          <li>Correção de erros e ajustes estratégicos</li>
-          <li>Acompanhamento emocional e técnico</li>
-          <li>Transição do aprendizado para a consistência</li>
-        </ul>
-      </div>
-    </div>
-
-    <button class="accordion">Bônus Final – Estratégia de Aprovação em Mesa Proprietária</button>
-    <div class="panel">
-      <ul>
-        <li>Método com 99% de assertividade (Apex Trader Funding – 25K)</li>
-        <li>Passo a passo para aprovação</li>
-        <li>Gerenciamento de risco adaptado</li>
-        <li>Melhores horários e ativos para operar</li>
-        <li>Como evitar os erros que reprovam traders</li>
-      </ul>
-    </div>
-
-    <a class="cta" href="#">Quero garantir minha vaga!</a>
+    <p>Dividido em 2 fases: teórica e prática, com acompanhamento direto do mentor.</p>
   </section>
+
+  <a class="whatsapp" href="https://wa.me/5567993383870?text=Quero%20ser%20trader%20profissional!" target="_blank">📲 Quero ser trader profissional!</a>
 
   <script>
     const acc = document.getElementsByClassName("accordion");
