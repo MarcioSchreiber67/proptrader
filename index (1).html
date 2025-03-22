@@ -9,23 +9,24 @@
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      margin: 0; padding: 0;
+      margin: 0;
+      padding: 0;
       background-color: #0d0d0d;
       color: #f5f5f5;
     }
     header {
       background-color: #1a1a1a;
-      text-align: center;
       padding: 30px 20px;
+      text-align: center;
     }
     header img {
       max-width: 240px;
-      border-radius: 10px;
+      height: auto;
       margin-bottom: 15px;
     }
     header h1 {
-      margin: 10px 0 5px;
       font-size: 2rem;
+      margin: 10px 0 5px;
     }
     header p {
       font-size: 1.1rem;
@@ -34,9 +35,44 @@
     .welcome {
       background-color: #00ffcc;
       color: #000;
-      padding: 12px;
+      padding: 14px;
       text-align: center;
-      font-weight: 600;
+      font-weight: bold;
+    }
+    section {
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #00ffcc;
+      margin-bottom: 20px;
+      font-size: 1.6rem;
+    }
+    .accordion, .subaccordion {
+      background-color: #1f1f1f;
+      color: #f5f5f5;
+      cursor: pointer;
+      padding: 15px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 1rem;
+      transition: 0.4s;
+      margin-top: 10px;
+      border-radius: 6px;
+    }
+    .active, .accordion:hover, .subaccordion:hover {
+      background-color: #333;
+    }
+    .panel, .subpanel {
+      padding: 0 15px;
+      display: none;
+      background-color: #111;
+      overflow: hidden;
+      border-left: 3px solid #00ffcc;
+      margin-bottom: 10px;
     }
     .cta {
       background-color: #00ffcc;
@@ -57,13 +93,12 @@
       right: 20px;
       background-color: #25D366;
       color: white;
-      padding: 15px 20px;
+      padding: 14px 20px;
       border-radius: 50px;
       text-decoration: none;
       font-weight: bold;
       box-shadow: 0 4px 8px rgba(0,0,0,0.3);
       z-index: 1000;
-      font-family: Poppins, sans-serif;
     }
   </style>
 </head>
@@ -74,16 +109,34 @@
   <header>
     <img src="logo.jpeg" alt="Logo PropTrader Master" />
     <h1>PropTrader Master</h1>
-    <p>Mentoria do Zero à Consistência no Day Trade</p>
+    <p>Mentoria completa e intensiva para quem quer consistência no Day Trade</p>
   </header>
 
-  <main>
-    <a class="cta" href="#">Quero garantir minha vaga!</a>
-  </main>
+  <section>
+    <h2>Conteúdo da Mentoria</h2>
+    <p>Dividido em 2 fases: teórica e prática, com acompanhamento direto do mentor.</p>
+  </section>
 
-  <a href="https://wa.me/5567993383870?text=Quero%20ser%20trader%20profissional!" class="whatsapp" target="_blank">
-    📲 Quero ser trader profissional!
-  </a>
+  <a class="whatsapp" href="https://wa.me/5567993383870?text=Quero%20ser%20trader%20profissional!" target="_blank">📲 Quero ser trader profissional!</a>
 
+  <script>
+    const acc = document.getElementsByClassName("accordion");
+    for (let i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
+      });
+    }
+
+    const subAcc = document.getElementsByClassName("subaccordion");
+    for (let i = 0; i < subAcc.length; i++) {
+      subAcc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
+      });
+    }
+  </script>
 </body>
 </html>
